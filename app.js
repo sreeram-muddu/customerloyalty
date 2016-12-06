@@ -7,7 +7,8 @@ var express = require('express')
   , routes = require('./routes')
   , user = require('./routes/user')
   , http = require('http')
-  , path = require('path');
+  , path = require('path')
+  , all_stores = require('./routes/all_stores');
 
 var app = express();
 
@@ -30,6 +31,12 @@ if ('development' == app.get('env')) {
 app.get('/', routes.index);
 app.get('/users', user.list);
 app.get('/partials/:name', routes.partials);
+app.get('/api/totalLoyalPerStore', all_stores.totalLoyalPerStore);
+app.get('/api/LoyalvsNonLoyal', all_stores.LoyalvsNonLoyal);
+app.get('/api/recentTenTransactions', all_stores.recentTenTransactions);
+app.get('/api/todaysLoyalty', all_stores.todaysLoyalty);
+app.get('/api/totalCustomers', all_stores.todaysLoyalty);
+app.get('/api/totalPurchasedAmount', all_stores.totalPurchasedAmount);
 
 http.createServer(app).listen(app.get('port'), function(){
   console.log('Express server listening on port ' + app.get('port'));
