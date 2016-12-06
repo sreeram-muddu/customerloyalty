@@ -1,4 +1,4 @@
-var loyaltyApp = angular.module('loyaltyApp',['ngRoute', 'ui.router'])
+var loyaltyApp = angular.module('loyaltyApp',['ngRoute', 'ui.router','angularVideoBg'])
 loyaltyApp.config([ '$urlRouterProvider', '$stateProvider',
       function($urlRouterProvider, $stateProvider) {
          $urlRouterProvider.otherwise('/');
