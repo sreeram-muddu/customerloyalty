@@ -3,9 +3,13 @@
   <head>
     <title><%= title %></title>
     <link rel='stylesheet' href='/stylesheets/style.css' />
-  </head>
-  <body>
+	<% include header.ejs%>
+	<script src = "js/controller.js"></script>
+    </head>
+  <body ng-app = "loyaltyApp" ng-controller = "mainController">
+  	<a ui-sref = "shop1">xyz</a>
     <h1><%= title %></h1>
     <p>Welcome to <%= title %></p>
+    <div ui-view></div>
   </body>
 </html>
