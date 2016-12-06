@@ -1,15 +1,29 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title><%= title %></title>
     <link rel='stylesheet' href='/stylesheets/style.css' />
 	<% include header.ejs%>
 	<script src = "js/controller.js"></script>
     </head>
   <body ng-app = "loyaltyApp" ng-controller = "mainController">
-  	<a ui-sref = "shop1">xyz</a>
-    <h1><%= title %></h1>
-    <p>Welcome to <%= title %></p><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-    <video-bg video-id="'-z3DS8ZmDZo'" ratio="4/3"></video-bg>
+  	<!--a ui-sref = "shop1">xyz</a-->
+    <div class ="row">
+    	<div class = "col-md-3">
+    		<button style = "width:200px; height:200px" type="button" class="btn btn-primary">Primary</button>
+    	</div>
+    	<div class ="col-md-3">
+    		<button style = "width:200px; height:200px" type="button" class="btn btn-success">Primary</button>
+    	</div>
+    	<div class = "col-md-3">
+    		<button style = "width:200px; height:200px" type="button" class="btn btn-info">Primary</button>
+    	</div>
+    	<div class ="col-md-3">
+    		<button style = "width:200px; height:200px" type="button" class="btn btn-warning">Primary</button>
+    	</div>
+    </div>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <video-bg video-id="'-z3DS8ZmDZo'" start = "22" ratio="4/3"></video-bg>
+    
+    
   </body>
 </html>

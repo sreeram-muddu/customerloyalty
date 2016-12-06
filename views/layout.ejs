@@ -1,0 +1,52 @@
+<html>
+<head>
+<% include header.ejs%>
+<script src = "js/controller.js"></script>
+<style>
+.nav-pills > li.active > a, .nav-pills > li.active > a:hover, .nav-pills > li.active > a:focus {
+    color:white;
+    background-color:grey;
+    }
+a{color:white;}
+#bg-right {
+  background-color: #206d77;
+  position: fixed;
+  top: 15%;
+  bottom: 0;
+  left: 0;
+  right: 85.5%;
+  z-index: -1;
+}
+#bg-top {
+  background-color: #1ABC9C;
+  position: fixed;
+  top: 0;
+  bottom: 85%;
+  left: 0;
+  right: 0;
+  z-index: -1;
+}
+</style>
+</head>
+<body ng-app = "loyaltyApp" ng-controller = "mainController">
+<div id="bg-right"></div>
+<div id ="bg-top"></div>
+
+<div class = "row">
+	<div class ="col-md-2" style = "position:fixed; top:15%">
+		<ul class="nav nav-pills nav-stacked">
+		  <li class="active"><a ui-sref="all_stores">All Stores</a></li>
+		  <li><a style = "font-color: white" ui-sref="recents">Recents</a></li>
+		  <li><a ui-sref="shop({shopId : 1})">Store 1</a></li>
+		  <li><a ui-sref="shop({shopId : 2})">Store 2</a></li>
+		  <li><a ui-sref="shop({shopId : 3})">Store 3</a></li>
+		  <li><a ui-sref="shop({shopId : 4})">Store 4</a></li>
+		  <li><a ui-sref="shop({shopId : 5})">Store 5</a></li>
+		</ul>
+	</div>
+	<div class ="container col-md-10" ui-view style = "position:fixed; top:15%; left:15%">
+		
+	</div>
+</div>
+</body>
+</html>

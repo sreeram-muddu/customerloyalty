@@ -6,6 +6,7 @@
     "start": "node app.js"
   },
   "dependencies": {
+    "angular-scroll": "^1.0.0",
     "angular-video-background": "^1.0.1",
     "ejs": "*",
     "express": "3.2.6",

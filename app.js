@@ -30,13 +30,15 @@ if ('development' == app.get('env')) {
 }
 
 app.get('/', routes.index);
+app.get('/layout', routes.layout);
 app.get('/users', user.list);
 app.get('/partials/:name', routes.partials);
 app.get('/api/totalLoyalPerStore', all_stores.totalLoyalPerStore);
-app.get('/api/LoyalvsNonLoyal', all_stores.LoyalvsNonLoyal);
+app.get('/api/loyal', all_stores.loyal);
+app.get('/api/nonloyal', all_stores.nonloyal);
 app.get('/api/recentTenTransactions', all_stores.recentTenTransactions);
 app.get('/api/todaysLoyalty', all_stores.todaysLoyalty);
-app.get('/api/totalCustomers', all_stores.todaysLoyalty);
+app.get('/api/totalCustomers', all_stores.totalCustomers);
 app.get('/api/totalPurchasedAmount', all_stores.totalPurchasedAmount);
 
 

@@ -1,0 +1,98 @@
+@import url(http://fonts.googleapis.com/css?family=Exo:200,500);
+@import "http://weloveiconfonts.com/api/?family=entypo";
+
+[class*="entypo-"]:before {
+  font-family: "entypo", sans-serif;}
+
+html, body {
+  background: #fff;
+  padding: 60px 15px;
+  color: #777;}
+
+ol {
+  margin-bottom: 50px;}
+
+h1 {
+  letter-spacing: -0.05em;
+  font-family: "Exo", sans-serif;
+  color: #3f5b80;}
+
+p {
+  font-family: "Open Sans", sans-serif;
+  line-height: 1.5em;
+  margin-bottom: 10px;
+  font-size: 16px;
+  padding: 0;
+  &:last-child {
+    margin-bottom: 40px;}
+  }
+
+code {
+  background: #f8f8f8;
+  color: #d64f9b;
+  border: 1px solid #eee;
+  padding: 2px;
+  border-radius: 3px;}
+
+a {
+  color: #f46830; 
+  &:hover {
+    color: #4fb3e8;
+    -webkit-transition: all .1s ease-in-out;
+       -moz-transition: all .1s ease-in-out;
+        -ms-transition: all .1s ease-in-out;
+         -o-transition: all .1s ease-in-out;
+            transition: all .1s ease-in-out;
+  }
+  text-decoration: none;}
+
+nav {
+  float: left;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background: #3b5a77;
+  position: fixed;}
+
+  nav .padded {
+    padding: 30px;}
+
+ul {
+  float: left;
+  width: 100%;
+  margin: 0 0 30px 0; /*Padding Fix*/
+  padding: 0;}
+
+ul li {
+  float: left; 
+  display: inline; 
+  margin-right: 0px;
+  &:nth-child(even) a {
+    background: #4a6c8c ;
+  }
+  list-style: none;}
+
+ul li a {
+  display: block;
+  padding: 20px;
+  font-family: "Exo", sans-serif;
+  font-weight: 200;
+  background: #6788a7;
+  &:hover {
+    color: #fff;
+    background: #e6764e;
+    -webkit-transition: all .2s ease-in-out;
+       -moz-transition: all .2s ease-in-out;
+        -ms-transition: all .2s ease-in-out;
+         -o-transition: all .2s ease-in-out;
+            transition: all .2s ease-in-out;
+  }
+  color: #fff;
+  text-decoration: none;}
+
+ul li.active a {
+  background: #58c7d0 ;}
+
+// scrollTop Styles
+ul li.scrollTop {
+float: right;}
