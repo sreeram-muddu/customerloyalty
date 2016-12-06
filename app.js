@@ -119,6 +119,18 @@ app.get('/getCurrentTransactionByShop',function(req,res){
 	
 });
 
+app.get('/admin',function(req,res){
+	
+	console.log('request for admin page');
+	res.render('adminlogin');
+});
+
+
+app.get('/shop',function(req,res){
+	
+	console.log('request for shop page');
+	res.render('shop');
+});
 app.get('/')
 
 
