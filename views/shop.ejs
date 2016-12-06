@@ -1,0 +1,107 @@
+
+<% include header.ejs%>
+
+<script src = "js/controller.js"></script>
+<script src = "js/shop.controller.js"></script>
+
+
+<div ng-app="loyaltyApp" ng-controller = "shopController">
+<div class="container">
+<h3 align="center">Store  Analytics</h3>
+<hr>
+	<div class="row">
+	<table>
+	<td>
+	<div class="col-sm-7">
+	<div google-chart chart="myChartObject" style="height:300px; width:700px;"/> 
+       </div>
+       </td>
+       <td>
+       <div class="col-sm-5"></div>
+       </td>
+       <td>
+       <div style="display:inline;" class="col-sm-8">
+       <div google-chart chart="myPieChartObject" style="height:600px; width:550px;display:inline">
+       </div>
+       </div>
+       </td>
+       
+       
+       
+       </div>
+       </div>
+       </table>
+       <br>
+       <div class="row">
+       
+       <div class="col-sm-6">
+       
+      <b>Top 10 customers by frequency of visits to the store</b>
+       
+     
+       <table class="table table-bordered">
+    <thead>
+      <tr>
+        <th>Phone Number</th>
+        <th>No of Visits</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr ng-repeat="customer in frequentCustomers">
+        <td>{{customer.customer_id}}</td>
+        <td>{{customer.no_of_visits}}</td>
+      </tr>
+</tbody>
+</table>       
+       </div>
+       <div class="col-sm-6">
+       
+       </div>
+     
+       <div class="row">
+                    <div> <b>&nbsp;&nbsp;&nbsp;Todays Store Stats </b></div>
+       
+       <div class="col-sm-1"></div>
+       
+       <div class="col-sm-6">
+         <table class="table table-bordered">
+    <tbody>
+       <tr>
+       <td><b>Total Customers Today</td>
+       <td>{{todayTotalCustomers}}</td>
+       </tr>
+       <tr>
+       <td><b>Total Loyal Today</b></td>
+       <td>{{todayLoyalCustomers}}</td>
+       </tr>
+       <tr>
+       <td><b>Total Amount Purchased</b></td>
+       <td>{{todayAmountPurchased}}</td>
+       </tr>
+       </tbody>
+       </table>
+       <br><br>
+                      <div> <b> Current Transaction at the store </b></div>
+       
+        <table class="table table-bordered">
+         <thead>
+         <th> Phone Number </th>
+         <th> Amount Purchased </th>
+         <th> Transaction TimeStamp </th>
+         </thead>
+        <tr>
+        <td>{{getCurrentTransaction.customer_id}}</td>
+        <td>{{getCurrentTransaction.amount_purchased}}</td>
+        <td>{{getCurrentTransaction.purchase_date}}</td>
+        </tr>
+       </table>
+       </div>
+       </div>
+       <br>
+       
+       
+       
+    
+       
+       
+</div>      

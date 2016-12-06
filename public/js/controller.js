@@ -1,3 +1,4 @@
+
 var loyaltyApp = angular.module('loyaltyApp',['ngRoute', 'ui.router','angularVideoBg', 'googlechart'])
 loyaltyApp.config([ '$urlRouterProvider', '$stateProvider',
       function($urlRouterProvider, $stateProvider) {
@@ -5,7 +6,7 @@ loyaltyApp.config([ '$urlRouterProvider', '$stateProvider',
          $stateProvider.state('shop', {
             url : '/shop',
             templateUrl : '/shop',
-            params : {'shopId' : null}	
+            params : {'shopname' : null}	
           })
           .state('all_stores',{
            url:'/all_stores',
@@ -15,10 +16,17 @@ loyaltyApp.config([ '$urlRouterProvider', '$stateProvider',
            url:'/recents',
            templateUrl:'partials/recents',
       })
+      .state('admin',{
+           url:'/admin',
+           templateUrl:'/admin',
+           controller:'admin.controller.js'
+              
+      });
          
 }]);
+
 loyaltyApp.controller('mainController', function($scope,$http){
-	console.log("loaded");
+	console.log("loaded Main controller for shop");
 	$scope.clickME = function(){
 		console.log("clicked");
 	}
@@ -240,3 +248,6 @@ $scope.recentTransactionsObject = {};
     
 	
 });
+
+
+

@@ -77,7 +77,7 @@ var connection = mysql.mysqlConnectionStringProvider.getMySqlConnection();
 connection.query(sql, function(err,rows,fields){
 
 	if(!err)
-  		callback({status : 200, data : rows});
+  		callback({status : 200, data : rows[0]});
   	else
   		{
   		callback({status : 400});
@@ -101,7 +101,7 @@ var connection = mysql.mysqlConnectionStringProvider.getMySqlConnection();
 connection.query(sql, function(err,rows,fields){
 
 	if(!err)
-  		callback({status : 200, data : rows});
+  		callback({status : 200, data : rows[0]});
   	else
   		{
   		callback({status : 400});

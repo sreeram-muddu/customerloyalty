@@ -10,6 +10,7 @@
     "angular-video-background": "^1.0.1",
     "ejs": "*",
     "express": "3.2.6",
+    "highcharts-ng": "0.0.13",
     "mysql": "^2.12.0"
   }
 }
