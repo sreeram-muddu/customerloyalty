@@ -1,4 +1,4 @@
-var loyaltyApp = angular.module('loyaltyApp');
+var loyaltyApp = angular.module("loyaltyApp");
 
 loyaltyApp.controller('shopController', function($scope,$http,$stateParams){
 	console.log("Shop Controller");

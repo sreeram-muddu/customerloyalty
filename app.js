@@ -135,6 +135,12 @@ app.get('/shop',function(req,res){
 });
 app.get('/')
 
+app.get('/layout',function(req,res){
+	
+	console.log('request for shop page');
+	res.render('layout');
+});
+
 
 http.createServer(app).listen(app.get('port'), function(){
   console.log('Express server listening on port ' + app.get('port'));
